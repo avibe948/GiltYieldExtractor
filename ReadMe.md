@@ -1,10 +1,10 @@
-The yield extractor gets all Uk standard gilts from the HL website and computes the bond yield assuming that all bonds pay twice a year. 
+The yield extractor gets all Uk standard gilts from the Hargreeves landsdown broker website and computes the bond yield assuming that all bonds pay twice a year. 
 HL publishes Gilt prices at this URL, here is a snapshot of the website as of 06th of April 2023 , as you can see they don't publish the YTM.
 ![image](https://user-images.githubusercontent.com/33904196/230695331-10f95079-3cf3-4e77-8300-0cbc1196e34c.png)
 
-This project demonstrate how to pull the prices from the url using pandas and compute the YTM of each gilt. Finally you can sort the gilts by the highest yield to maturity for short or long term bonds ( look at the end of the notebook). 
-
-The YTM is computed using either the dirty or clean price. The market trading convention is to use clean prices and your broker will normally charge you for the accrued interest. The dirty price is the clean price (exchange traded price) + any accrued interest. 
+This project demonstrate how to pull the prices from the url using pandas and compute the yield to maturity of each gilt. 
+The YTM is computed using either the dirty or the clean price. The market trading convention for UK gilts is to quote and trade clean gilt prices and brokers l normally charge you for the accrued interest which the bond accumulated since the last coupon payment date.
+The dirty price is the clean price (exchange traded price) + any accrued interest. Dirty prices may reflect the true return on investment as it deducts interest that you pay for upfront (unearned).
 
 DISCLAIMER : I DO NOT TAKE ANY RESPONSIBILITY TO INCORRECT YIELD CALCULATIONS , BUGS OR OTHER ISSUES WITH THE CODE. USE AT YOUR OWN RISK.
 
