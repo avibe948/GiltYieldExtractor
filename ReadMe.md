@@ -1,9 +1,19 @@
-initial publication - I belive there is  bug in the yield calculator will be fixed and unit test added. 
+The yield extractor gets all Uk standard gilts from the Hargreeves landsdown broker website and computes the bond yield assuming that all bonds pay twice a year. 
+HL publishes Gilt prices at this URL, here is a snapshot of the website as of 06th of April 2023 , as you can see they don't publish the YTM.
+![image](https://user-images.githubusercontent.com/33904196/230695331-10f95079-3cf3-4e77-8300-0cbc1196e34c.png)
 
-The yield extractor gets all Uk standard gilts from the HL website and computes the bond yield assuming that all bonds pay twice a year. 
-It computes the dirty price which is the clean price of the bond which is offered by your broker + any accrued interest. 
-It is then using the dirty price to compute the yield to maturity and present it in a table and export it to excel (c:\temp) is the default path but you can change it to the download folder path by chaning it to %USERPROFILE%\Downloads
+This project demonstrate how to pull the prices from the url using pandas and compute the yield to maturity of each gilt. 
+The YTM is computed using either the dirty or the clean price. The market trading convention for UK gilts is to quote and trade clean gilt prices and brokers l normally charge you for the accrued interest which the bond accumulated since the last coupon payment date.
+The dirty price is the clean price (exchange traded price) + any accrued interest. Dirty prices may reflect the true return on investment as it deducts interest that you pay for upfront (unearned).
 
-USE AT YOUR OWN RISK, I DO NOT TAKE ANY RESPONSIBILITY TO INCORRECT YIELD CALCULATIONS , BUGS OR OTHER ISSUES WITH THE CODE. 
+DISCLAIMER : I DO NOT TAKE ANY RESPONSIBILITY TO INCORRECT YIELD CALCULATIONS , BUGS OR OTHER ISSUES WITH THE CODE. USE AT YOUR OWN RISK.
 
-Contributions to extend the code to get gilts data from other sources will be appriciated (Bloomberg / reuters ).
+The code is using a third party python libary which uses numerical method to solve the non linear bond equation to find the yield to maturity. 
+When you price zero coupon bonds there is a closed form solution for the YTM ( the yield to maturity can be easily inverted).
+
+Contributions to extend the code to get gilts data from other sources will be appriciated (Bloomberg / reuters  or any other reliable source).
+
+At the end of the jupyter notebook you can see the yields sorted by maturity (sub 5 years)
+
+![image](https://user-images.githubusercontent.com/33904196/230694990-3e3236f4-e974-4948-925a-0e2c66918a54.png)
+
