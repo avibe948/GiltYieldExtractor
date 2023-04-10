@@ -21,3 +21,8 @@ I possible contribution will be to use a source that includes all this informati
 
 ![image](https://user-images.githubusercontent.com/33904196/230694990-3e3236f4-e974-4948-925a-0e2c66918a54.png)
 
+How To Run ? 
+install python 3.10+ 
+and then run the command line: 
+pip install -r requirements.txt 
+
