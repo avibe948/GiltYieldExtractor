@@ -13,7 +13,16 @@ When you price zero coupon bonds there is a closed form solution for the YTM ( t
 
 Contributions to extend the code to get gilts data from other sources will be appriciated (Bloomberg / reuters  or any other reliable source).
 
-At the end of the jupyter notebook you can see the yields sorted by maturity (sub 5 years)
+At the end of the jupyter notebook you can see the yields sorted by maturity (sub 5 years).
+
+If you want to convert it to process corporate bonds you will have to enrich the CouponFreq to the correct coupon freq ( if its not paying every 6 month , ie twice a year).
+
+I possible contribution will be to use a source that includes all this information ,or use a web scrapper that enriches the bond info further. 
 
 ![image](https://user-images.githubusercontent.com/33904196/230694990-3e3236f4-e974-4948-925a-0e2c66918a54.png)
+
+How To Run ? 
+install python 3.10+ 
+and then run the command line: 
+pip install -r requirements.txt 
 
