@@ -1,5 +1,7 @@
-beautifulsoup4==4.12.2
-googlesearch_python==1.2.3
-numpy_financial==1.0.0
 pandas==1.5.3
 requests==2.28.1
+pandas_market_calendars == 4.3.1
+numpy_financial
+lxml==5.0.0
+aiohttp
+nest_asyncio
