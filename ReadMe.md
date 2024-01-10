@@ -1,3 +1,8 @@
+Issues first:
+This project is in progress. There are a number of issues that needs to be resolved with the yield solver. I didn't have the time to look into it. It can be used as indicative rate but the clean yield calculation 
+is not correct under certain conditions. Never the less its usefull to get used as indicative yield price and shows all the tradable assets sorted by dirty yield. 
+
+Description:
 The yield extractor gets all Uk standard gilts from the Hargreeves landsdown broker website and computes the bond yield assuming that all bonds pay twice a year. 
 HL publishes Gilt prices at this URL, here is a snapshot of the website as of 06th of April 2023 , as you can see they don't publish the YTM.
 ![image](https://user-images.githubusercontent.com/33904196/230695331-10f95079-3cf3-4e77-8300-0cbc1196e34c.png)
